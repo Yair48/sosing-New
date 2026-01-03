@@ -1,0 +1,210 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.services-grid, .advantages-grid, .testimonials-grid, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.advantages-grid img {
+    width: 50px;
+    height: 50px;
+}
+
+.process-steps {
+    list-style: none;
+    counter-reset: step;
+}
+
+.process-steps li {
+    counter-increment: step;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.process-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    background: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-item button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background: #f9f9f9;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+#contact-form, #lead-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float img {
+    width: 40px;
+    height: 40px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+}
